@@ -27,5 +27,3 @@ document.addEventListener('turbolinks:load', () => {
         })
     });
 })
-
-Vue.component('paynl-success', require('./components/Checkout/PaynlSuccess.vue').default)

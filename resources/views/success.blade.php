@@ -3,9 +3,5 @@
 @section('title', 'Checkout')
 
 @section('content')
-    <div class="container mx-auto">
-        <paynl-success>
-            @include('rapidez::checkout.steps.success')
-        </paynl-success>
-    </div>
+    @include('rapidez::checkout.steps.success')
 @endsection
