@@ -1,0 +1,36 @@
+{
+    "name": "rapidez/paynl",
+    "description": "Rapidez PayNL",
+    "keywords": [
+        "rapidez"
+    ],
+    "homepage": "https://rapidez.io",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "indy koning",
+            "email": "indy@justbetter.nl"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "rapidez/core": ">=0.12.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rapidez\\Paynl\\PaynlServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Rapidez\\Paynl\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
