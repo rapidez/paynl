@@ -16,5 +16,5 @@ Route::middleware('web')->group(function () {
         }
 
         return view('paynl::success');
-    });
+    })->name('paynl.success');
 });
