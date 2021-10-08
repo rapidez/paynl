@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', () => {
-    window.app.$on('CheckoutPaymentSaved', (data) => {
+    window.app.$on('checkout-payment-saved', (data) => {
         if (!data.order.payment_method_code.includes('paynl_')) {
             return;
         }
