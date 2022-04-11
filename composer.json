@@ -13,8 +13,8 @@
         }
     ],
     "require": {
-        "php": "^7.4",
-        "rapidez/core": ">=0.12.1"
+        "php": "^8.0|^8.1",
+        "rapidez/core": "~0.54"
     },
     "config": {
         "sort-packages": true
