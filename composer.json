@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": "^8.0|^8.1",
-        "rapidez/core": "~0.54"
+        "rapidez/core": "~0.77"
     },
     "config": {
         "sort-packages": true
