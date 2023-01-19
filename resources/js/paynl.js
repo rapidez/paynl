@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('turbo:load', () => {
     window.app.$on('checkout-payment-saved', (data) => {
         if (!data.order.payment_method_code.includes('paynl_')) {
             return;
