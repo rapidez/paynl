@@ -6,18 +6,19 @@ You need to have the [PayNL Magento 2 module](https://github.com/paynl/magento2-
 
 ## Installation
 
-```
+```bash
 composer require rapidez/paynl
 ```
-And add the JS to `resources/js/app.js`:
-```
-require('Vendor/rapidez/paynl/resources/js/paynl')
+
+Make sure this exists in your `app.js`:
+```js
+import.meta.glob(['Vendor/rapidez/*/resources/js/app.js'], { eager: true });
 ```
 
 ### Views
 
 You can publish the views with:
-```
+```bash
 php artisan vendor:publish --provider="Rapidez\Paynl\PaynlServiceProvider" --tag=views
 ```
 
