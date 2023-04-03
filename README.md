@@ -10,11 +10,6 @@ You need to have the [PayNL Magento 2 module](https://github.com/paynl/magento2-
 composer require rapidez/paynl
 ```
 
-Make sure this exists in your `app.js`:
-```js
-import.meta.glob(['Vendor/rapidez/*/resources/js/app.js'], { eager: true });
-```
-
 ### Views
 
 You can publish the views with:
