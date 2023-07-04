@@ -20,7 +20,7 @@ document.addEventListener('turbo:load', () => {
             }`,
             variables: {
                 order_id: data.order.id,
-                return_url: window.location.protocol + '//' + window.location.hostname + '/paynl/finish'
+                return_url: window.url('/paynl/finish')
             }
         }).then(response => {
             window.location.replace(response.data.data.paynlStartTransaction.redirectUrl)
