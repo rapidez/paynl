@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/0.4.1...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/0.4.2...master)
+## [0.4.2](https://github.com/rapidez/paynl/releases/tag/0.4.2) - 2023-10-19
+
+### Fixed
+
+- Add check for existence of orderId (#10)
+
 ## [0.4.1](https://github.com/rapidez/paynl/releases/tag/0.4.1) - 2023-07-04
 
 ### Fixed
