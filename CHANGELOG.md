@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/0.4.2...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/0.4.3...master)
+## [0.4.3](https://github.com/rapidez/paynl/releases/tag/0.4.3) - 2023-11-07
+
+### Fixed
+
+- Add store header to StartTransaction request (#11)
+
 ## [0.4.2](https://github.com/rapidez/paynl/releases/tag/0.4.2) - 2023-10-19
 
 ### Fixed
