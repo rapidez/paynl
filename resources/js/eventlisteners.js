@@ -5,7 +5,7 @@ document.addEventListener('turbo:load', () => {
         }
         window.app.checkout.doNotGoToTheNextStep = true
 
-        axios.post(config.magento_url + '/graphql', {
+        const query = {
             query:
             `mutation StartTransaction(
                 $order_id: String
@@ -22,7 +22,13 @@ document.addEventListener('turbo:load', () => {
                 order_id: data.order.id,
                 return_url: window.url('/paynl/finish')
             }
-        }).then(response => {
+        }
+
+        const options = {
+            headers: { 'Store': window.config.store_code }
+        }
+
+        axios.post(config.magento_url + '/graphql', query, options).then(response => {
             window.location.replace(response.data.data.paynlStartTransaction.redirectUrl)
         })
     });
