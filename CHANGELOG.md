@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/0.4.3...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/0.5.0...master)
+## [0.5.0](https://github.com/rapidez/paynl/releases/tag/0.5.0) - 2023-12-13
+
+### Added
+
+- Payment icons (#12)
+
 ## [0.4.3](https://github.com/rapidez/paynl/releases/tag/0.4.3) - 2023-11-07
 
 ### Fixed
