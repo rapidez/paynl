@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/1.0.0...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/1.0.1...master)
+## [1.0.1](https://github.com/rapidez/paynl/releases/tag/1.0.1) - 2024-01-19
+
+### Fixed
+
+- Ensure guest email is set if guest order
+
 ## [1.0.0](https://github.com/rapidez/paynl/releases/tag/1.0.0) - 2024-01-19
 
 With this update `paynl/magento2-graphql` version 1 isn't supported anymore!
