@@ -17,6 +17,8 @@ class PaynlServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'paynl');
 
+        $this->mergeConfigFrom(__DIR__.'/../config/rapidez/paynl.php', 'rapidez.paynl');
+
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/paynl'),
@@ -25,6 +27,10 @@ class PaynlServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../resources/payment-icons' => public_path('payment-icons'),
             ], 'payment-icons');
+
+            $this->publishes([
+                __DIR__.'/../config/rapidez/paynl.php' => config_path('rapidez/paynl.php'),
+            ], 'config');
         }
     }
 }

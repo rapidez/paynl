@@ -1,0 +1,6 @@
+mutation paynlCaptureTransaction($pay_order_id: String!, $order_number: String!) {
+    paynlCaptureTransaction(pay_order_id: $pay_order_id, order_number: $order_number) {
+        result,
+        message
+    }
+}
