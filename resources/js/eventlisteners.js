@@ -25,6 +25,25 @@ document.addEventListener('turbo:load', () => {
             })
         }
 
+        if (!token.value && window.app.guestEmail) {
+            await axios.post(config.magento_url + '/graphql', {
+                query: `mutation setGuestEmailOnCart($cart_id: String!, $email: String!) {
+                    setGuestEmailOnCart(input: {
+                        cart_id: $cart_id
+                        email: $email
+                    }) {
+                        cart {
+                            email
+                          }
+                      }
+                  }`,
+                variables: {
+                    cart_id: window.pay_cart_id,
+                    email: window.app.guestEmail
+                }
+            }, options)
+        }
+
         await axios.post(config.magento_url + '/graphql', {
             query:
             `mutation setPaymentMethodOnCart($cart_id: String!, $code: String!, $pay_issuer: String) {
