@@ -1,0 +1,9 @@
+query paynlGetTransaction($pay_order_id: String!) {
+  paynlGetTransaction(pay_order_id: $pay_order_id) {
+    orderId
+    state
+    stateName
+    orderNumber
+    isSuccess
+  }
+}
