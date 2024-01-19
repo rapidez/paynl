@@ -5,7 +5,7 @@
 
 ### Fixed
 
-- Ensure guest email is set if guest order
+- Ensure guest email is set if guest order (702e3ea)
 
 ## [1.0.0](https://github.com/rapidez/paynl/releases/tag/1.0.0) - 2024-01-19
 
