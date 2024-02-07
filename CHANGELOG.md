@@ -1,6 +1,11 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/0.6.0...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/0.6.1...master)
+## [0.6.1](https://github.com/rapidez/paynl/releases/tag/0.6.1) - 2024-02-07
+
+### Added
+* State to FinishPaynlTransaction graphql
+
 ## [0.6.0](https://github.com/rapidez/paynl/releases/tag/0.6.0) - 2024-02-07
 
 ### Added
