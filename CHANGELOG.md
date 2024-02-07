@@ -1,6 +1,36 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/0.4.3...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/0.6.0...master)
+## [0.6.0](https://github.com/rapidez/paynl/releases/tag/0.6.0) - 2024-02-07
+
+### Added
+
+- Add fail url + Add payment failed messages (https://github.com/rapidez/paynl/pull/15)
+
+## [1.0.1](https://github.com/rapidez/paynl/releases/tag/1.0.1) - 2024-01-19
+
+### Fixed
+
+- Ensure guest email is set if guest order (702e3ea)
+
+## [1.0.0](https://github.com/rapidez/paynl/releases/tag/1.0.0) - 2024-01-19
+
+With this update `paynl/magento2-graphql` version 1 isn't supported anymore!
+
+### Changed
+
+- `paynl/magento2-graphql` v2.0.0 support (#14)
+
+### Fixed
+
+- Fix iDeal & Givacard icon (#13)
+
+## [0.5.0](https://github.com/rapidez/paynl/releases/tag/0.5.0) - 2023-12-13
+
+### Added
+
+- Payment icons (#12)
+
 ## [0.4.3](https://github.com/rapidez/paynl/releases/tag/0.4.3) - 2023-11-07
 
 ### Fixed
