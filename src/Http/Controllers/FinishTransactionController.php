@@ -16,7 +16,7 @@ class FinishTransactionController extends Controller
     {
         $orderId = $request->get('orderId');
         if (empty($orderId)) {
-            return redirect('cart');
+            return redirect(config('rapidez.paynl.fail_url', 'cart'));
         }
 
         $url = config('rapidez.magento_url').'/graphql';
@@ -31,7 +31,12 @@ class FinishTransactionController extends Controller
             ->object();
 
         if (!optional($response->data->paynlFinishTransaction)->isSuccess ?? false) {
-            return redirect('cart');
+            $stateMessage = __(config('rapidez.paynl.state_message.'.$response->data->paynlFinishTransaction->state, 'Payment failed'));
+            return redirect(config('rapidez.paynl.fail_url', 'cart'))->with(['notification' => [
+                'message' => $stateMessage,
+                'type' => 'info',
+                'show' => true
+            ]]);
         }
 
         return view('paynl::success');
