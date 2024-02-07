@@ -1,5 +1,6 @@
 mutation FinishPaynlTransaction($pay_order_id: String) {
   paynlFinishTransaction (pay_order_id: $pay_order_id) {
       isSuccess
+      state
   }
 }
