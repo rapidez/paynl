@@ -10,7 +10,7 @@
 
 ### Added
 
-- Add fail url + Add payment failed messages (https://github.com/rapidez/paynl/pull/15)
+- Add fail url + Add payment failed messages (#15)
 
 ## [1.0.1](https://github.com/rapidez/paynl/releases/tag/1.0.1) - 2024-01-19
 
