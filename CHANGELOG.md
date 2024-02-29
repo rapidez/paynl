@@ -1,6 +1,24 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/1.0.1...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/1.1.0...master)
+## [1.1.0](https://github.com/rapidez/paynl/releases/tag/1.1.0) - 2024-02-29
+
+### Added
+
+- Rapidez v2 support (#18)
+
+## [0.6.1](https://github.com/rapidez/paynl/releases/tag/0.6.1) - 2024-02-07
+
+### Fixed
+
+- State to FinishPaynlTransaction graphql (#16)
+
+## [0.6.0](https://github.com/rapidez/paynl/releases/tag/0.6.0) - 2024-02-07
+
+### Added
+
+- Add fail url + Add payment failed messages (#15)
+
 ## [1.0.1](https://github.com/rapidez/paynl/releases/tag/1.0.1) - 2024-01-19
 
 ### Fixed
