@@ -13,9 +13,9 @@
         }
     ],
     "require": {
-        "php": "^8.0|^8.1",
+        "php": "^8.1|^8.2",
         "justbetter/laravel-magento-client": "^2.1",
-        "rapidez/core": "^1.8"
+        "rapidez/core": "^1.8|^2.0"
     },
     "config": {
         "sort-packages": true
