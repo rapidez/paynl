@@ -1,12 +1,6 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/1.1.0...master)
-## [1.1.0](https://github.com/rapidez/paynl/releases/tag/1.1.0) - 2024-02-29
-
-### Added
-
-- Rapidez v2 support (#18)
-
+[Unreleased changes](https://github.com/rapidez/paynl/compare/0.6.1...master)
 ## [0.6.1](https://github.com/rapidez/paynl/releases/tag/0.6.1) - 2024-02-07
 
 ### Fixed
