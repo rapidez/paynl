@@ -45,7 +45,7 @@ class FinishTransactionController extends Controller
 
         if (!data_get($response, 'data.paynlGetTransaction.isSuccess', false)) {
             // https://github.com/paynl/magento2-graphql/blob/dcc3df5efceb43f6b8ec2c26833de7c52da0e564/Model/Resolver/RestoreCart.php#L66
-            config('rapidez.models.sales_order')::where('increment_id', $incrementId)->with(['quote' => fn($builder) => $builder->withoutGlobalScope(new IsActiveScope)])->first()->quote->update(['is_active' => 1]);
+            config('rapidez.models.sales_order')::where('increment_id', $incrementId)->with(['quote' => fn($builder) => $builder->withoutGlobalScopes()])->first()->quote->update(['is_active' => 1]);
 
             return redirect(config('rapidez.paynl.fail_url'));
         }
