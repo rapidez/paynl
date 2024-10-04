@@ -2,7 +2,12 @@
 
 namespace Rapidez\Paynl;
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Rapidez\Paynl\Actions\CheckSuccessfulOrder;
+use Rapidez\Paynl\Listeners\Healthcheck\PaynlHealthcheck;
+use TorMorten\Eventy\Facades\Eventy;
 
 class PaynlServiceProvider extends ServiceProvider
 {
@@ -13,11 +18,7 @@ class PaynlServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'paynl');
-
-        $this->mergeConfigFrom(__DIR__.'/../config/rapidez/paynl.php', 'rapidez.paynl');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
@@ -27,10 +28,19 @@ class PaynlServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../resources/payment-icons' => public_path('payment-icons'),
             ], 'payment-icons');
-
-            $this->publishes([
-                __DIR__.'/../config/rapidez/paynl.php' => config_path('rapidez/paynl.php'),
-            ], 'config');
         }
+
+        Route::get('paynl/checkout/finish', fn() => redirect(route('checkout.success', request()->query()), 308));
+
+        Eventy::addFilter('checkout.queries.order.data', function($attributes = []) {
+            $attributes[] = 'pay_redirect_url';
+            return $attributes;
+        });
+
+        Eventy::addFilter('checkout.checksuccess', function($success = true) {
+            return $success && App::call(CheckSuccessfulOrder::class);
+        });
+
+        PaynlHealthcheck::register();
     }
 }
