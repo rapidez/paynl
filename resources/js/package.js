@@ -1,5 +1,5 @@
 import './eventlisteners'
 
-document.addEventListener('turbo:load', (event) => {
-    Vue.set(window.app.checkout, 'pay_issuer', null)
+document.addEventListener('vue:loaded', (event) => {
+   Vue.set(window.app.custom, 'pay_issuer', null)
 });

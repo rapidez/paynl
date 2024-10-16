@@ -27,7 +27,7 @@ addBeforePaymentMethodHandler(async function (query, variables, options) {
         }
     }`
 
-    variables.pay_issuer = window.app.checkout.pay_issuer
+    variables.pay_issuer = window.app.custom.pay_issuer
 
     return [query, variables, options];
 });
