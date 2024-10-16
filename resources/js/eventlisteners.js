@@ -68,5 +68,5 @@ addBeforePlaceOrderHandler(async function (query, variables, options) {
 });
 
 addAfterPlaceOrderHandler(async function (response, mutationComponent) {
-    mutationComponent.redirect = response?.data?.placeOrder?.order.pay_redirect_url || mutationComponent.redirect;
+    mutationComponent.redirect = response?.data?.placeOrder?.order?.pay_redirect_url || mutationComponent.redirect;
 });
