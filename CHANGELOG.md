@@ -1,6 +1,13 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/2.0.1...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/2.0.2...master)
+## [2.0.2](https://github.com/rapidez/paynl/releases/tag/2.0.2) - 2024-11-29
+
+### Fixed
+
+- Update Riverty / Afterpay logo (#22)
+- Listen to vue:loaded (#23)
+
 ## [2.0.1](https://github.com/rapidez/paynl/releases/tag/2.0.1) - 2024-06-20
 
 ### Fixed
