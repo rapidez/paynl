@@ -1,7 +1,7 @@
 import { token } from 'Vendor/rapidez/core/resources/js/stores/useUser'
 import { mask } from 'Vendor/rapidez/core/resources/js/stores/useMask'
 
-document.addEventListener('turbo:load', () => {
+document.addEventListener('vue:loaded', () => {
     async function placeOrder() {
         if (!token.value && window.app.guestEmail) {
             await window.magentoGraphQL(
