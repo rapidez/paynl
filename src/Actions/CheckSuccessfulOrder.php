@@ -1,14 +1,12 @@
 <?php
 
-namespace Rapidez\Paynl\Http\Controllers;
+namespace Rapidez\Paynl\Actions;
 
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use JustBetter\MagentoClient\Client\Magento;
-use Rapidez\Core\Models\Scopes\IsActiveScope;
 
-class FinishTransactionController extends Controller
+class CheckSuccessfulOrder
 {
     /**
      * @throws RequestException
@@ -18,7 +16,7 @@ class FinishTransactionController extends Controller
         $orderId = $request->get('orderId');
         $incrementId = $request->get('incrementId');
         if (empty($orderId)) {
-            return redirect(config('rapidez.paynl.fail_url'));
+            return true;
         }
 
         $magento
@@ -45,11 +43,21 @@ class FinishTransactionController extends Controller
 
         if (!data_get($response, 'data.paynlGetTransaction.isSuccess', false)) {
             // https://github.com/paynl/magento2-graphql/blob/dcc3df5efceb43f6b8ec2c26833de7c52da0e564/Model/Resolver/RestoreCart.php#L66
-            config('rapidez.models.sales_order')::where('increment_id', $incrementId)->with(['quote' => fn($builder) => $builder->withoutGlobalScopes()])->first()->quote->update(['is_active' => 1]);
+            config('rapidez.models.sales_order')::query()
+                ->whereHas('sales_order_payments', fn($query) => $query
+                    ->where('additional_information->transactionId', $orderId)
+                )
+                ->with([
+                    'quote' => fn($query) => $query
+                        ->withoutGlobalScopes()
+                ])
+                ->first()
+                ->quote
+                ->update(['is_active' => 1]);
 
-            return redirect(config('rapidez.paynl.fail_url'));
+            return false;
         }
 
-        return view('paynl::success');
+        return true;
     }
 }
