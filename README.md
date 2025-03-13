@@ -23,6 +23,8 @@ MAGENTO_ACCESS_TOKEN=
 
 By default the access token is used as bearer token, to use oauth for this instead see the [authentication section](https://github.com/justbetter/laravel-magento-client#authentication)
 
+Only the `Paynl_Payment::graphql_capture` (GraphQL - Capture) resource access is required.
+
 ### Views
 
 You can publish the views with:
