@@ -4,9 +4,11 @@ namespace Rapidez\Paynl;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Rapidez\Paynl\Actions\CheckSuccessfulOrder;
 use Rapidez\Paynl\Listeners\Healthcheck\PaynlHealthcheck;
+use Rapidez\Paynl\View\Composers\PaymentMethodComposer;
 use TorMorten\Eventy\Facades\Eventy;
 
 class PaynlServiceProvider extends ServiceProvider
@@ -29,6 +31,8 @@ class PaynlServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/payment-icons' => public_path('payment-icons'),
             ], 'payment-icons');
         }
+
+        View::composer('rapidez::checkout.steps.payment_method', PaymentMethodComposer::class);
 
         Route::get('paynl/checkout/finish', fn() => redirect(route('checkout.success', request()->query()), 308));
 

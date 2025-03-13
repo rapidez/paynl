@@ -32,6 +32,19 @@ You can publish the views with:
 php artisan vendor:publish --provider="Rapidez\Paynl\PaynlServiceProvider" --tag=views
 ```
 
+### Pin payments
+
+If you want to enable the pin terminal dropdown you will have to add the following snippet
+
+```
+pay_issuers {
+    id
+    name
+}
+```
+
+to the `available_payment_methods` field in `rapidez/core/resources/views/cart/queries/fragments/cart.graphql`
+
 ## License
 
 GNU General Public License v3. Please see [License File](LICENSE) for more information.
