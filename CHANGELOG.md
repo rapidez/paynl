@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/3.0.0...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/3.1.0...master)
+## [3.1.0](https://github.com/rapidez/paynl/releases/tag/3.1.0) - 2025-03-19
+
+### Added
+
+- Instore pin payment support (#24)
+
 ## [3.0.0](https://github.com/rapidez/paynl/releases/tag/3.0.0) - 2024-12-13
 
 ### Added
