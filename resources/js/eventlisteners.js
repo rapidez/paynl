@@ -2,13 +2,13 @@ import { cart } from 'Vendor/rapidez/core/resources/js/stores/useCart'
 import { addBeforePaymentMethodHandler, addBeforePlaceOrderHandler, addAfterPlaceOrderHandler } from 'Vendor/rapidez/core/resources/js/stores/usePaymentHandlers'
 
 addBeforePaymentMethodHandler(async function (query, variables, options) {
-    if (!variables.code.includes('paynl_') || !window?.app?.checkout?.pay_issuer)
+    if (!variables.code.includes('paynl_') || !window?.app?.custom?.pay_issuer)
     {
         return [query, variables, options];
     }
 
     // Add pay_issuers to setPaymentMethodOnCart
-    query = config.queries.cart +
+    query = config.fragments.cart +
     `
 
     mutation setPayPaymentMethodOnCart(
@@ -38,7 +38,7 @@ addBeforePlaceOrderHandler(async function (query, variables, options) {
     }
 
     // Add pay_return_url to placeorder
-    query = config.queries.order + config.queries.orderV2 +
+    query = config.fragments.order + config.fragments.orderV2 +
     `
 
     mutation payPlaceOrder($cart_id: String!, $pay_return_url: String) {
