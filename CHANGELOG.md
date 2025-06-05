@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/3.1.0...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/4.0.0...master)
+## [4.0.0](https://github.com/rapidez/paynl/releases/tag/4.0.0) - 2025-06-05
+
+### Added
+
+- Rapidez v4 support (aa87977)
+
 ## [3.1.0](https://github.com/rapidez/paynl/releases/tag/3.1.0) - 2025-03-19
 
 ### Added
