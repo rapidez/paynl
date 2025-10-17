@@ -1,6 +1,18 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/3.1.0...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/3.1.1...master)
+## [3.1.1](https://github.com/rapidez/paynl/releases/tag/3.1.1) - 2025-10-17
+
+### Fixed
+
+- Prevent authorized transactions from automatically being captured (#25)
+
+## [4.0.0](https://github.com/rapidez/paynl/releases/tag/4.0.0) - 2025-06-05
+
+### Added
+
+- Rapidez v4 support (aa87977)
+
 ## [3.1.0](https://github.com/rapidez/paynl/releases/tag/3.1.0) - 2025-03-19
 
 ### Added
