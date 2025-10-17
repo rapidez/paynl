@@ -19,16 +19,6 @@ class CheckSuccessfulOrder
             return true;
         }
 
-        $magento
-            ->store(config('rapidez.store_code'))
-            ->graphql(
-                view('paynl::graphql.capture-transaction')->render(),
-                [
-                    'pay_order_id' => $orderId,
-                    'order_number' => $incrementId
-                ]
-            );
-
         $response = $magento
             ->store(config('rapidez.store_code'))
             ->graphql(
@@ -56,6 +46,19 @@ class CheckSuccessfulOrder
                 ->update(['is_active' => 1]);
 
             return false;
+        }
+        
+        if (data_get($response, 'data.paynlGetTransaction.stateName', false) === 'PAID') {
+            // Only trigger capture for paid transactions, this updates the Magento order even when Pay cannot reach the webhook.
+            $magento
+                ->store(config('rapidez.store_code'))
+                ->graphql(
+                    view('paynl::graphql.capture-transaction')->render(),
+                    [
+                        'pay_order_id' => $orderId,
+                        'order_number' => $incrementId
+                    ]
+                );
         }
 
         return true;
