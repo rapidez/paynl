@@ -32,7 +32,7 @@ class PaynlServiceProvider extends ServiceProvider
             ], 'payment-icons');
         }
 
-        View::composer('rapidez::checkout.steps.payment_method', PaymentMethodComposer::class);
+        View::composer('rapidez::checkout.steps.payment-method', PaymentMethodComposer::class);
 
         Route::get('paynl/checkout/finish', fn() => redirect(route('checkout.success', request()->query()), 308));
 
