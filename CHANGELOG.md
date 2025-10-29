@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/4.0.1...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/4.0.2...master)
+## [4.0.2](https://github.com/rapidez/paynl/releases/tag/4.0.2) - 2025-10-29
+
+### Fixed
+
+- Payment method view composer name fix (#27)
+
 ## [4.0.1](https://github.com/rapidez/paynl/releases/tag/4.0.1) - 2025-10-17
 
 ### Fixed
