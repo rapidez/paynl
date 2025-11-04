@@ -18,7 +18,7 @@
     <div class="ml-2" v-if="variables.code === method.code">
         <x-rapidez::input.select
             name="paynl_issuer"
-            v-model="$root.custom.pay_issuer"
+            v-model="custom.pay_issuer"
             required
             v-on:change="mutate"
         >

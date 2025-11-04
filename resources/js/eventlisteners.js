@@ -2,7 +2,7 @@ import { cart } from 'Vendor/rapidez/core/resources/js/stores/useCart'
 import { addBeforePaymentMethodHandler, addBeforePlaceOrderHandler, addAfterPlaceOrderHandler } from 'Vendor/rapidez/core/resources/js/stores/usePaymentHandlers'
 
 addBeforePaymentMethodHandler(async function (query, variables, options) {
-    if (!variables.code.includes('paynl_') || !window?.app?.custom?.pay_issuer)
+    if (!variables.code.includes('paynl_') || !window?.app?.config?.globalProperties?.custom?.pay_issuer)
     {
         return [query, variables, options];
     }
@@ -27,7 +27,7 @@ addBeforePaymentMethodHandler(async function (query, variables, options) {
         }
     }`
 
-    variables.pay_issuer = window.app.custom.pay_issuer
+    variables.pay_issuer = window.app.config.globalProperties.custom.pay_issuer
 
     return [query, variables, options];
 });
