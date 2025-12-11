@@ -1,6 +1,33 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/2.1.0...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/5.0.0...master)
+## [5.0.0](https://github.com/rapidez/paynl/releases/tag/5.0.0) - 2025-12-11
+
+### Added
+
+- Rapidez v5 support (5d68ee7)
+- paynl/magento2-plugin v4 support (#30)
+
+### Changed
+
+- Vue 3 upgrade (#28)
+
+### Fixed
+
+- Redirect url fix (#29)
+
+## [4.1.0](https://github.com/rapidez/paynl/releases/tag/4.1.0) - 2025-12-11
+
+### Added
+
+- paynl/magento2-plugin v4 support (#31)
+
+## [3.2.0](https://github.com/rapidez/paynl/releases/tag/3.2.0) - 2025-12-11
+
+### Added
+
+- paynl/magento2-plugin v4 support (#32)
+
 ## [2.1.0](https://github.com/rapidez/paynl/releases/tag/2.1.0) - 2025-12-11
 
 ### Added
