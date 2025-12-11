@@ -1,6 +1,30 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/3.1.1...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/3.2.0...master)
+## [3.2.0](https://github.com/rapidez/paynl/releases/tag/3.2.0) - 2025-12-11
+
+### Added
+
+- paynl/magento2-plugin v4 support (#32)
+
+## [2.1.0](https://github.com/rapidez/paynl/releases/tag/2.1.0) - 2025-12-11
+
+### Added
+
+- paynl/magento2-plugin v4 support (#33)
+
+## [4.0.2](https://github.com/rapidez/paynl/releases/tag/4.0.2) - 2025-10-29
+
+### Fixed
+
+- Payment method view composer name fix (#27)
+
+## [4.0.1](https://github.com/rapidez/paynl/releases/tag/4.0.1) - 2025-10-17
+
+### Fixed
+
+- Prevent authorized transactions from automatically being captured (#26)
+
 ## [3.1.1](https://github.com/rapidez/paynl/releases/tag/3.1.1) - 2025-10-17
 
 ### Fixed
