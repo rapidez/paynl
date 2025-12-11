@@ -1,6 +1,24 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/4.0.2...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/4.1.0...master)
+## [4.1.0](https://github.com/rapidez/paynl/releases/tag/4.1.0) - 2025-12-11
+
+### Added
+
+- paynl/magento2-plugin v4 support (#31)
+
+## [3.2.0](https://github.com/rapidez/paynl/releases/tag/3.2.0) - 2025-12-11
+
+### Added
+
+- paynl/magento2-plugin v4 support (#32)
+
+## [2.1.0](https://github.com/rapidez/paynl/releases/tag/2.1.0) - 2025-12-11
+
+### Added
+
+- paynl/magento2-plugin v4 support (#33)
+
 ## [4.0.2](https://github.com/rapidez/paynl/releases/tag/4.0.2) - 2025-10-29
 
 ### Fixed
