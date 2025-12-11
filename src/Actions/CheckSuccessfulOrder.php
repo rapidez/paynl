@@ -13,9 +13,9 @@ class CheckSuccessfulOrder
      */
     public function __invoke(Request $request, Magento $magento)
     {
-        $orderId = $request->get('orderId');
+        $orderId = $request->get('id') ?: $request->get('orderId');
         $incrementId = $request->get('incrementId');
-        if (empty($orderId)) {
+        if (empty($orderId) || !preg_match('/[a-zA-Z0-9]+X[a-zA-Z0-9]+/', $orderId)) {
             return true;
         }
 
