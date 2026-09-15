@@ -1,11 +1,49 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/4.1.1...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/5.0.2...master)
+## [5.0.2](https://github.com/rapidez/paynl/releases/tag/5.0.2) - 2026-09-15
+
+### Fixed
+
+- Check for incrementId as well (#38)
+
+## [4.1.2](https://github.com/rapidez/paynl/releases/tag/4.1.2) - 2026-09-15
+
+### Fixed
+
+- Check for incrementId as well (#41)
+
+## [3.2.1](https://github.com/rapidez/paynl/releases/tag/3.2.1) - 2026-09-15
+
+### Fixed
+
+- Check for incrementId as well (#40)
+
+## [2.1.2](https://github.com/rapidez/paynl/releases/tag/2.1.2) - 2026-09-15
+
+### Fixed
+
+- Check for incrementId as well (#39)
+
+
+
+## [5.0.1](https://github.com/rapidez/paynl/releases/tag/5.0.1) - 2026-09-10
+
+### Fixed
+
+- Update ideal logo to ideal-wero logo (#34)
+
 ## [4.1.1](https://github.com/rapidez/paynl/releases/tag/4.1.1) - 2026-02-13
 
 ### Changed
 - Update iDEAL logo to iDEAL wero logo (#36)
 
+
+## [2.1.1](https://github.com/rapidez/paynl/releases/tag/2.1.1) - 2026-02-13
+
+### Changed
+
+- Update iDEAL logo to iDEAL wero logo (https://github.com/rapidez/paynl/pull/35)
 
 ## [5.0.0](https://github.com/rapidez/paynl/releases/tag/5.0.0) - 2025-12-11
 
