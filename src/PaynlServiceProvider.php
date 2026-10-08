@@ -36,11 +36,6 @@ class PaynlServiceProvider extends ServiceProvider
 
         Route::get('paynl/checkout/finish', fn() => redirect(route('checkout.success', request()->query()), 308));
 
-        Eventy::addFilter('checkout.queries.order.data', function($attributes = []) {
-            $attributes[] = 'pay_redirect_url';
-            return $attributes;
-        });
-
         Eventy::addFilter('checkout.checksuccess', function($success = true) {
             return $success && App::call(CheckSuccessfulOrder::class);
         });
