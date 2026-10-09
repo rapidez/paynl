@@ -1,6 +1,14 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/5.0.2...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/5.0.3...master)
+## [5.0.3](https://github.com/rapidez/paynl/releases/tag/5.0.3) - 2026-10-09
+
+### Fixed
+
+- Only request pay_redirect_url for Pay (#42)
+
+
+
 ## [5.0.2](https://github.com/rapidez/paynl/releases/tag/5.0.2) - 2026-09-15
 
 ### Fixed
