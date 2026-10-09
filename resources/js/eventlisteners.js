@@ -51,6 +51,7 @@ addBeforePlaceOrderHandler(async function (query, variables, options) {
         ) {
             order {
                 ...order
+                pay_redirect_url
             }
             orderV2 {
                 ...orderV2
