@@ -17,19 +17,9 @@ class FinishTransactionController extends Controller
     {
         $orderId = $request->get('id') ?: $request->get('orderId');
         $incrementId = $request->get('incrementId');
-        if (empty($orderId) || empty($incrementId) || !preg_match('/[a-zA-Z0-9]+X[a-zA-Z0-9]+/', $orderId)) {
+        if (empty($orderId) || empty($incrementId) || !preg_match('/^[a-zA-Z0-9]+X[a-zA-Z0-9]+$/', $orderId)) {
             return redirect(config('rapidez.paynl.fail_url'));
         }
-
-        $magento
-            ->store(config('rapidez.store_code'))
-            ->graphql(
-                view('paynl::graphql.capture-transaction')->render(),
-                [
-                    'pay_order_id' => $orderId,
-                    'order_number' => $incrementId
-                ]
-            );
 
         $response = $magento
             ->store(config('rapidez.store_code'))
@@ -43,9 +33,24 @@ class FinishTransactionController extends Controller
             ->throw()
             ->object();
 
+        // Both ids come from the url, so only act when the transaction belongs to the given order.
+        if ((string) data_get($response, 'data.paynlGetTransaction.orderNumber') !== (string) $incrementId) {
+            return redirect(config('rapidez.paynl.fail_url'));
+        }
+
+        $magento
+            ->store(config('rapidez.store_code'))
+            ->graphql(
+                view('paynl::graphql.capture-transaction')->render(),
+                [
+                    'pay_order_id' => $orderId,
+                    'order_number' => $incrementId
+                ]
+            );
+
         if (!data_get($response, 'data.paynlGetTransaction.isSuccess', false)) {
             // https://github.com/paynl/magento2-graphql/blob/dcc3df5efceb43f6b8ec2c26833de7c52da0e564/Model/Resolver/RestoreCart.php#L66
-            config('rapidez.models.sales_order')::where('increment_id', $incrementId)->with(['quote' => fn($builder) => $builder->withoutGlobalScopes()])->first()->quote->update(['is_active' => 1]);
+            config('rapidez.models.sales_order')::where('increment_id', $incrementId)->with(['quote' => fn($builder) => $builder->withoutGlobalScopes()])->first()?->quote?->update(['is_active' => 1]);
 
             return redirect(config('rapidez.paynl.fail_url'));
         }
