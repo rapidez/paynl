@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/paynl/compare/5.0.3...master)
+[Unreleased changes](https://github.com/rapidez/paynl/compare/5.0.4...5.0.4)
+## [5.0.4](https://github.com/rapidez/paynl/releases/tag/5.0.4) - 2026-11-17
+
+### Fixed
+
+- Only handle the Pay transaction when it belongs to the order in the url (#43)
+
 ## [5.0.3](https://github.com/rapidez/paynl/releases/tag/5.0.3) - 2026-10-09
 
 ### Fixed
@@ -15,43 +21,11 @@
 
 - Check for incrementId as well (#38)
 
-## [4.1.2](https://github.com/rapidez/paynl/releases/tag/4.1.2) - 2026-09-15
-
-### Fixed
-
-- Check for incrementId as well (#41)
-
-## [3.2.1](https://github.com/rapidez/paynl/releases/tag/3.2.1) - 2026-09-15
-
-### Fixed
-
-- Check for incrementId as well (#40)
-
-## [2.1.2](https://github.com/rapidez/paynl/releases/tag/2.1.2) - 2026-09-15
-
-### Fixed
-
-- Check for incrementId as well (#39)
-
-
-
 ## [5.0.1](https://github.com/rapidez/paynl/releases/tag/5.0.1) - 2026-09-10
 
 ### Fixed
 
 - Update ideal logo to ideal-wero logo (#34)
-
-## [4.1.1](https://github.com/rapidez/paynl/releases/tag/4.1.1) - 2026-02-13
-
-### Changed
-- Update iDEAL logo to iDEAL wero logo (#36)
-
-
-## [2.1.1](https://github.com/rapidez/paynl/releases/tag/2.1.1) - 2026-02-13
-
-### Changed
-
-- Update iDEAL logo to iDEAL wero logo (https://github.com/rapidez/paynl/pull/35)
 
 ## [5.0.0](https://github.com/rapidez/paynl/releases/tag/5.0.0) - 2025-12-11
 
@@ -68,24 +42,6 @@
 
 - Redirect url fix (#29)
 
-## [4.1.0](https://github.com/rapidez/paynl/releases/tag/4.1.0) - 2025-12-11
-
-### Added
-
-- paynl/magento2-plugin v4 support (#31)
-
-## [3.2.0](https://github.com/rapidez/paynl/releases/tag/3.2.0) - 2025-12-11
-
-### Added
-
-- paynl/magento2-plugin v4 support (#32)
-
-## [2.1.0](https://github.com/rapidez/paynl/releases/tag/2.1.0) - 2025-12-11
-
-### Added
-
-- paynl/magento2-plugin v4 support (#33)
-
 ## [4.0.2](https://github.com/rapidez/paynl/releases/tag/4.0.2) - 2025-10-29
 
 ### Fixed
@@ -97,12 +53,6 @@
 ### Fixed
 
 - Prevent authorized transactions from automatically being captured (#26)
-
-## [3.1.1](https://github.com/rapidez/paynl/releases/tag/3.1.1) - 2025-10-17
-
-### Fixed
-
-- Prevent authorized transactions from automatically being captured (#25)
 
 ## [4.0.0](https://github.com/rapidez/paynl/releases/tag/4.0.0) - 2025-06-05
 
@@ -141,18 +91,6 @@
 
 - Rapidez v2 support (#18)
 - Rapidez v2 compatibility (#19)
-
-## [0.6.1](https://github.com/rapidez/paynl/releases/tag/0.6.1) - 2024-02-07
-
-### Fixed
-
-- State to FinishPaynlTransaction graphql (#16)
-
-## [0.6.0](https://github.com/rapidez/paynl/releases/tag/0.6.0) - 2024-02-07
-
-### Added
-
-- Add fail url + Add payment failed messages (#15)
 
 ## [1.0.1](https://github.com/rapidez/paynl/releases/tag/1.0.1) - 2024-01-19
 
